@@ -1,12 +1,11 @@
-
 ---
-
-title: "Homework15.qmd"
+title: "Homework 15"
 format: html
 editor: visual
 ---
-## My first dplyr script
-clear r brain
+
+## My first dplyr script clear r brain
+
 ```{r}
 rm(list=ls())
 library(tidyverse)
@@ -14,24 +13,30 @@ library(here)
 library(dplyr)
 library(ggplot2)
 ```
-get the data and quick summary 
+
+get the data and quick summary
+
 ```{r}
 read.csv(here("data", "compensation.csv"))
 compensation <- read.csv(here("data", "compensation.csv"))
 glimpse(compensation)
 summary(compensation)
 ```
-columns select rows slice 
+
+columns select rows slice
+
 ```{r}
 select(compensation, -Root)
 slice(compensation,2)
 slice(compensation, 2:10)
 ```
+
 ```{r}
 with(compensation, Fruit > 80)
 filter(compensation, Fruit > 80)
 filter(compensation, Fruit > 80 | Fruit < 20)
 ```
+
 ```{r}
 #gets rows for each condition and assigns to an object 
 lo_hi_fruit <- filter(compensation, Fruit > 80 | Fruit < 20)
@@ -42,6 +47,7 @@ head(compensation)
 compensation <- mutate(compensation, logFruit=log(Fruit))
 head(compensation)
 ```
+
 ```{r}
 arrange(compensation, Fruit)
 select(filter(compensation, Fruit > 80))
@@ -50,6 +56,7 @@ compensation %>%
   select(Root)
 
 ```
+
 ```{r}
 summarise(group_by(compensation,Grazing), meanFruit=mean(Fruit))
 compensation %>%
@@ -61,10 +68,10 @@ compensation_mean_centred <- compensation %>%
 
 
 ```
+
 ```{r}
 library(broom)
 compensation_lms <- compensation %>%
   group_by(Grazing) %>%
   do(tidy(lm(Fruit ~ Root, data=.)))
 ```
-

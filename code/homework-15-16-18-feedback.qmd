@@ -1,0 +1,26 @@
+---
+title: "homework feedback"
+format: html
+editor: visual
+---
+
+## Homework feedback
+
+### Homework 15
+
+Please make sure to save (or move) your .qmd files into your code folder (both homeworks 15 and 16 are instead in the root folder). I will look to see that you have fixed this next time I grade the homeworks.
+
+In your .qmd file, you deleted key information when you created the file. The part that looks like lines 1-5 of my file here is called the "YAML Header" and it is important to keep it with the file. I have restored it to your file, but in general when you make a new .qmd file, delete all of the boilerplate material EXCEPT the YAML Header.
+
+Work on doing a more complete job in the part of your files where you are making comments about the what/why of your work (the "scientific thinking" part). For example, on line 26 you wrote "columns select rows slice" but you didn't really explain what that means or give much detail. You may want to refer back to homeworks to solve other problems later in the semester, and you will help future Emma if you keep track of more details. I will be looking to see improvement there on future homeworks.
+
+### Homework 16
+You don't have the donnerville_percent_cover in your data folder, so I cannot run your code. We are trying to model an open science workflow, and it is essential that the user (in this case me, but it could be future you or a colleague you are trying to work with) be able to access all aspects of the project from within the repository. So I'm taking 1 point off this homework because the data are not included. I will take more points off in future if you make this mistake again as it is an essential part of what we're learning.
+
+Lines 45 through 53 are almost correct but not quite. Take a look at the key to see how to do it correctly, or feel free to see me for help.
+
+I can also see that you sort of gave up on this homework at line 55. This class is all about Math.  Please get help from me or a friend any time the coding is getting past you. I can't give you full credit for trying because there was no explanation for why some of the code was missing.
+
+### Homework 18
+
+Looks good.

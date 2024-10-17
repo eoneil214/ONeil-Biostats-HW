@@ -51,8 +51,9 @@ donnerville$cover_type[fix2] <- "Vascular"
 fix3 <- which(donnerville$cover_type == "bryophtes")
 donnerville$cover_type[fix3] <- "Bryophytes"              
 ```
-Math 
+
+Math
+
 ```{r}
 
 ```
-
